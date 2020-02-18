@@ -68,7 +68,13 @@ int OnCalculate(const int rates_total,
                 const int &spread[])
   {
 //---
-   
+      for(int i=0;i<rates_total;i++)
+     {
+      ABuffer[i]=(high[i]+low[i])/2;
+      BBuffer[i]=(high[i]+low[i])/2;
+      CBuffer[i]=(high[i]+low[i])/2;
+      DBuffer[i]=(high[i]+low[i])/2;
+     }
 //--- return value of prev_calculated for next call
    return(rates_total);
   }
