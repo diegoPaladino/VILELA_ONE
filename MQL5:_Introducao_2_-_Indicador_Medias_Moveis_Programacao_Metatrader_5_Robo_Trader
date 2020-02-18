@@ -68,11 +68,11 @@ int OnCalculate(const int rates_total,
                 const int &spread[])
   {
 //---
-      for(int i=2;i<rates_total;i++)
+      for(int i=3;i<rates_total;i++)
      {
       ABuffer[i]=close[i];
-      BBuffer[i]=(close[i]+close[i-1]/2;
-      CBuffer[i]=0;
+      BBuffer[i]=(close[i]+close[i-1])/2;
+      CBuffer[i]=(close[i]+close[i-1]+close[i-2])/3;
       DBuffer[i]=0;
      }
 //--- return value of prev_calculated for next call
