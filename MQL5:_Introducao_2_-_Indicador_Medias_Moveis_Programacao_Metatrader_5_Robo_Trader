@@ -70,10 +70,10 @@ int OnCalculate(const int rates_total,
 //---
       for(int i=0;i<rates_total;i++)
      {
-      ABuffer[i]=(high[i]+low[i])/2;
-      BBuffer[i]=(high[i]+low[i])/2;
-      CBuffer[i]=(high[i]+low[i])/2;
-      DBuffer[i]=(high[i]+low[i])/2;
+      ABuffer[i]=high[i];
+      BBuffer[i]=low[i]);
+      CBuffer[i]=0;
+      DBuffer[i]=0;
      }
 //--- return value of prev_calculated for next call
    return(rates_total);
