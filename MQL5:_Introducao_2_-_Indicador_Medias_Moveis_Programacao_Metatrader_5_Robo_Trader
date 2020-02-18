@@ -73,7 +73,7 @@ int OnCalculate(const int rates_total,
       ABuffer[i]=close[i];
       BBuffer[i]=(close[i]+close[i-1])/2;
       CBuffer[i]=(close[i]+close[i-1]+close[i-2])/3;
-      DBuffer[i]=0;
+      DBuffer[i]=(close[i]+close[i-1]+close[i-2]+close[i-3])/4;
      }
 //--- return value of prev_calculated for next call
    return(rates_total);
