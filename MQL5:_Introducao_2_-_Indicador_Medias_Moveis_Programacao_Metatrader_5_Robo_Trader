@@ -71,7 +71,7 @@ int OnCalculate(const int rates_total,
       for(int i=0;i<rates_total;i++)
      {
       ABuffer[i]=high[i];
-      BBuffer[i]=low[i]);
+      BBuffer[i]=low[i];
       CBuffer[i]=0;
       DBuffer[i]=0;
      }
