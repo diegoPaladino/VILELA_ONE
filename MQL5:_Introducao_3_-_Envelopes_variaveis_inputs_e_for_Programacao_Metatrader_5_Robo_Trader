@@ -24,6 +24,9 @@
 //--- indicator buffers
 double         SuperiorBuffer[];
 double         InferiorBuffer[];
+
+input   int periodos = 14;
+input   double desvio = 1.0;
 //+------------------------------------------------------------------+
 //| Custom indicator initialization function                         |
 //+------------------------------------------------------------------+
