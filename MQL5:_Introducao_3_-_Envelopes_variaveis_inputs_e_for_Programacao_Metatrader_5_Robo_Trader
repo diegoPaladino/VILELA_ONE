@@ -57,8 +57,10 @@ int OnCalculate(const int rates_total,
 
    for(int i=periodos-1; i<rates_total; i++)
      {
-      SuperiorBuffer[i]=(close[i]+close[i-1]+close[i-2]+close[i-3]+close[i-4]+close[i-5]+close[i-6]+close[i-7]+close[i-8]+close[i-9]+close[i-10]+close[i-11]+close[i-12]+close[i-13])/periodos*(1+desvio/100);
-      InferiorBuffer[i]=(close[i]+close[i-1]+close[i-2]+close[i-3]+close[i-4]+close[i-5]+close[i-6]+close[i-7]+close[i-8]+close[i-9]+close[i-10]+close[i-11]+close[i-12]+close[i-13])/periodos*(1-desvio/100);
+     double media = (close[i]+close[i-1]+close[i-2]+close[i-3]+close[i-4]+close[i-5]+close[i-6]+close[i-7]+close[i-8]+close[i-9]+close[i-10]+close[i-11]+close[i-12]+close[i-13])/periodos;
+     
+      SuperiorBuffer[i]=media*(1+desvio/100);
+      InferiorBuffer[i]=media*(1-desvio/100);
      }
 //--- return value of prev_calculated for next call
    return(rates_total);
