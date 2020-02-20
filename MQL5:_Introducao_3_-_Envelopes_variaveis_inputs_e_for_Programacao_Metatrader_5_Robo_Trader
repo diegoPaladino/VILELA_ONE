@@ -51,10 +51,13 @@ int OnCalculate(const int rates_total,
                 const int &spread[])
   {
 //---
-   for(int i=13; i<rates_total; i++)
+
+  int periodos = 14;
+
+   for(int i=periodos-1; i<rates_total; i++)
      {
-      SuperiorBuffer[i]=(close[i]+close[i-1]+close[i-2]+close[i-3]+close[i-4]+close[i-5]+close[i-6]+close[i-7]+close[i-8]+close[i-9]+close[i-10]+close[i-11]+close[i-12]+close[i-13])/14*1.001;
-      InferiorBuffer[i]=(close[i]+close[i-1]+close[i-2]+close[i-3]+close[i-4]+close[i-5]+close[i-6]+close[i-7]+close[i-8]+close[i-9]+close[i-10]+close[i-11]+close[i-12]+close[i-13])/14*0.999;
+      SuperiorBuffer[i]=(close[i]+close[i-1]+close[i-2]+close[i-3]+close[i-4]+close[i-5]+close[i-6]+close[i-7]+close[i-8]+close[i-9]+close[i-10]+close[i-11]+close[i-12]+close[i-13])/periodos*1.001;
+      InferiorBuffer[i]=(close[i]+close[i-1]+close[i-2]+close[i-3]+close[i-4]+close[i-5]+close[i-6]+close[i-7]+close[i-8]+close[i-9]+close[i-10]+close[i-11]+close[i-12]+close[i-13])/periodos*0.999;
      }
 //--- return value of prev_calculated for next call
    return(rates_total);
