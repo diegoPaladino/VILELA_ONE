@@ -57,7 +57,12 @@ int OnCalculate(const int rates_total,
 
    for(int i=periodos-1; i<rates_total; i++)
      {
-     double media = (close[i]+close[i-1]+close[i-2]+close[i-3]+close[i-4]+close[i-5]+close[i-6]+close[i-7]+close[i-8]+close[i-9]+close[i-10]+close[i-11]+close[i-12]+close[i-13])/periodos;
+     double media = 0;
+     
+     for(int j=0;j<periodos;j++)
+       {
+         media = media + close[i-j] / periodos;
+       }
      
       SuperiorBuffer[i]=media*(1+desvio/100);
       InferiorBuffer[i]=media*(1-desvio/100);
