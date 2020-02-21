@@ -33,8 +33,8 @@ int OnInit()
    SetIndexBuffer(0,VendaBuffer,INDICATOR_DATA);
    SetIndexBuffer(1,CompraBuffer,INDICATOR_DATA);
 //--- setting a code from the Wingdings charset as the property of PLOT_ARROW
-   PlotIndexSetInteger(0,PLOT_ARROW,159);
-   PlotIndexSetInteger(1,PLOT_ARROW,159);
+   PlotIndexSetInteger(0,PLOT_ARROW,234);
+   PlotIndexSetInteger(1,PLOT_ARROW,233);
    
 //---
    return(INIT_SUCCEEDED);
