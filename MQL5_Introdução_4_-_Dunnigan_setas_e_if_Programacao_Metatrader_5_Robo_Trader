@@ -62,7 +62,7 @@ int OnCalculate(const int rates_total,
        }
       else
         {
-         VendaBuffer[i]=low[i];
+         VendaBuffer[i]=0;
         }
         
      if(low[i]>low[i-1] && high[i]>high[i-1])
@@ -71,10 +71,9 @@ int OnCalculate(const int rates_total,
        }
       else
         {
-         CompraBuffer[i]=low[i];
+         CompraBuffer[i]=0;
         }
-        
-      CompraBuffer[i]=low[i];
+
      }
 //--- return value of prev_calculated for next call
    return(rates_total);
